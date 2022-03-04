@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.tarea3.Controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Sebastián Lizano
  */
 @Controller
+@Slf4j
 public class CatalogoControler {
     
-    @RequestMapping("/url")
+    @RequestMapping("/")
     public String page(Model model) {
         model.addAttribute("attribute", "value");
-        return "view.name";
+        return "index";
     }
     
 }
