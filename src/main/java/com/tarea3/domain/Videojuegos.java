@@ -5,8 +5,10 @@ import javax.persistence.*;
 import lombok.Data;
 
 
+
 @Data
 @Entity
+@Table(name="videojuego")
 public class Videojuegos implements Serializable {
     
     private static final long serialVersionUID = 1L;

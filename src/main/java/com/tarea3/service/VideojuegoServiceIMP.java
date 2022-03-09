@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author Sebastián Lizano
  */
+@Service
 public class VideojuegoServiceIMP implements VideojuegoService {
 
     @Autowired

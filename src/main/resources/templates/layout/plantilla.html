@@ -6,25 +6,22 @@ and open the template in the editor.
 -->
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
+
     <head>
         <title>Gameshop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
+
     <body>
-        <header>
-            
+        <header th:fragment="header">
+
             <nav id="navbar">
                 <a href="#">Inicio</a>
                 <a href="@{/mostrarCatalogo}">Productos</a>
                 <a href="@{/nuevoJuego}">Agregar Productos</a>
                 <a href="#">Contactenos</a>
-                    <h1>Bienvenidos</h1>
-                    <br>
-                    <h3>Los mejores juegos del 2022</h3>
-                </div>
-            </nav>   
         </header>
     </body>
 </html>
