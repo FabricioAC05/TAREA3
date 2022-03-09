@@ -28,6 +28,7 @@
                         <td th:text="${item.empresa}"></td>
                         <td th:text="${item.plataforma}"></td>
                         <td th:text="${item.numjugadores}"></td>
+                        <td><a th:href="@{/modificarJuego/} + ${item.idjuego}">Modificar</a></td>
                     </tr>
                 </table>    
     </body>

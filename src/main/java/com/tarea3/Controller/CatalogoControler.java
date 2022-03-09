@@ -21,17 +21,17 @@ public class CatalogoControler {
     @Autowired
     private VideojuegoService juegoService;
     
-    @RequestMapping("#")
+    @RequestMapping("/")
     public String page(Model model) {
         
-        return "index";
+        return "/index";
     }
     
     @GetMapping("/mostrarCatalogo")
     public String mostrar (Model model){
         var juegos = juegoService.getVideojuegos();
         model.addAttribute("juegos", juegos);
-        return "Listar";
+        return "/Listar";
     }
     
     @GetMapping("/nuevoJuego")
@@ -45,6 +45,11 @@ public class CatalogoControler {
         return "redirect:/mostrarCatalogo";
     }
     
-    
+    @GetMapping("/modificarJuego/{idjuego}")
+    public String modificarJuego(Videojuegos videojuego, Model model){
+        videojuego = juegoService.getVideojuego(videojuego);
+        model.addAttribute("juego", videojuego);
+        return "Agregar";
+    }
     
 }
