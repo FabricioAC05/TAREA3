@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Dashboard</title>
         <meta charset="UTF-8">
@@ -27,6 +27,28 @@ and open the template in the editor.
             </nav>
         </header>
         <section id="about" class="content">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Genero</th>
+                        <th>Empresa</th>
+                        <th>Plataforma</th>
+                        <th>Num jugadores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="videojuego :${videojuegos}">
+                        <td th:text="${videojuego.nombre}"></td>
+                        <td th:text="${videojuego.genero}"></td>
+                        <td th:text="${videojuego.empresa}"></td>
+                        <td th:text="${videojuego.plataforma}"></td>
+                        <td th:text="${videojuego.numjugadores}"></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
     </body>
 </html>

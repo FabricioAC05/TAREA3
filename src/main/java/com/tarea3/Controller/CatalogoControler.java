@@ -14,19 +14,38 @@ import com.tarea3.service.VideojuegoService;
  *
  * @author Sebastián Lizano
  */
+
 @Controller
 @Slf4j
+
+
 public class CatalogoControler {
-    
+    /*
+    @GetMapping("/")
+    public String inicio(Model model){
+        log.info("Estamos en MVC");
+        
+        return "index";
+    }
+    */
+
     @Autowired
-    private VideojuegoService juegoService;
-    
+    private VideojuegoDao videojuegoDao;
+    /*
     @RequestMapping("/")
     public String page(Model model) {
         
         return "/index";
     }
+    */
+    @GetMapping("/")public String inicio(Model model){
+        log.info("MVC");
+        var videojuegos = videojuegoDao.findAll();
+        model.addAttribute("videojuegos", videojuegos);
+        return "index";        
+    }
     
+    /*
     @GetMapping("/mostrarCatalogo")
     public String mostrar (Model model){
         var juegos = juegoService.getVideojuegos();
@@ -51,5 +70,5 @@ public class CatalogoControler {
         model.addAttribute("juego", videojuego);
         return "Agregar";
     }
-    
+    */
 }

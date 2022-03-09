@@ -1,10 +1,30 @@
-
 package com.tarea3.domain;
 import java.io.Serializable;
 import javax.persistence.*;
 import lombok.Data;
 
 
+
+
+/*
+public class Videojuegos {
+    private String nombre;
+    private String genero;
+    private String empresa;
+    private String plataforma;
+
+    public Videojuegos(String nombre, String genero, String empresa, String plataforma) {
+        this.nombre = nombre;
+        this.genero = genero;
+        this.empresa = empresa;
+        this.plataforma = plataforma;
+    }
+
+    public Videojuegos() {
+    }
+    
+}
+*/
 
 @Data
 @Entity
